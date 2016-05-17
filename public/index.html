@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <script src="js/angular.min.js"></script>
+        <script src="js/socket.io.js"></script>
+        <script src="app.js"></script>
+    </head>
+
+    <body ng-app="app">
+        <h1>Socket.IO</h1>
+        <div ng-controller="HomeController">
+            <input type="text" ng-model="greet">
+            <button ng-click="sendGreet()">Greet</button>
+             <ul>
+                <li ng-repeat="r in replies">
+                    {{ r.message }}
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>
